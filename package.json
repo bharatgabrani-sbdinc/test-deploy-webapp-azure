@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "client": "cd client && npm run start",
+    "build:client" : "cd client && yarn && yarn build && cd ..",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "yarn && cd client && yarn && yarn build && cd ../ && pm2 start server.js"
+    "start": "yarn && cd client && yarn && yarn build && cd .. && node server.js"
   },
   "author": "",
   "license": "ISC",
